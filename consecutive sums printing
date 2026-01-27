@@ -1,0 +1,20 @@
+def convert_consecutive_sums(int_list):
+    index=len(int_list)-1
+    conse_list=[]
+    for item in range(index):
+        conse_list.append(int_list[item]+int_list[item+1])
+    return conse_list
+def finnal_triangle(int_list):
+    while len(int_list)>1:
+        new_list=convert_consecutive_sums(int_list)
+        print(new_list)
+        int_list=new_list
+        
+def convert_str_to_int(values):
+    num_list=[]
+    for i in values:
+        num_list.append(int(i))
+    return num_list
+values=input().split(",")
+finnal_triangle(convert_str_to_int(values))
+
