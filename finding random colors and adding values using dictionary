@@ -1,0 +1,20 @@
+def ball_sc_dict(ball_sc_random_picks):
+    ball_color_score_dict={}   
+    for item in ball_sc_random_picks:
+        ball_details=item.split(":")
+        ball_clr,bal_sc=ball_details[0],int(ball_details[1])
+        if ball_clr in ball_color_score_dict:
+            #total_score
+            old_score=ball_color_score_dict[ball_clr]
+            total_score=old_score+bal_sc
+            ball_color_score_dict[ball_clr]=total_score
+        #add item
+        else:
+            ball_color_score_dict[ball_clr]=bal_sc
+        
+    return ball_color_score_dict
+
+
+ball_sc_random_picks=input().split(",")
+ball_color_score=ball_sc_dict(ball_sc_random_picks)
+print(ball_color_score)
