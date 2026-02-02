@@ -1,0 +1,23 @@
+def convert_str_to_int(values):
+    new_dict_values=[]
+    for value in values:
+        new_dict_values.append(int(value))
+    return new_dict_values
+dict_key_1=input().split()
+dict_key_1values=input().split()
+dict_key_2=input().split()
+dict_key_2values=input().split()
+converted_dict_key1_values=convert_str_to_int(dict_key_1values)
+converted_dict_key2_values=convert_str_to_int(dict_key_2values)
+def combine_the_dict_key_values(keys,values):
+       dict_1={}
+       for i in range(len(keys)):
+           add_key=keys[i]
+           add_value=values[i]
+           dict_1[add_key]=add_value
+       return dict_1 
+final_1=combine_the_dict_key_values(dict_key_1,converted_dict_key1_values)
+final_2=combine_the_dict_key_values(dict_key_2,converted_dict_key2_values)
+final_1.update(final_2)
+final=final_1.items()
+print(sorted(final))
