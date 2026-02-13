@@ -1,0 +1,15 @@
+s=input().split()
+freq={}
+
+for key in s:
+    if key in freq:
+        freq[key]+=1
+    else:
+        freq[key]=1
+result=[]
+for key,value in sorted(freq.items()):
+    print("{}: {}".format(key,value))
+#     result.append("{}: {}".format(key,value))
+# result=sorted(result)
+# for each in result:
+#     print(each)
