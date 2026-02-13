@@ -1,0 +1,18 @@
+first=input().split()
+m,n=int(first[0]),int(first[1])
+matrix=[]
+
+for i in range(m):
+    row_values=input().split()
+    row=[]
+    for j in range(n):
+        row.append(int(row_values[j]))
+    matrix.append(row)
+# print(matrix)
+
+for s in range(m+n-1):
+    for i in range(m):
+        for j in range(n):
+            if i+j==s:
+                print(matrix[i][j],end=" ")
+    print()
