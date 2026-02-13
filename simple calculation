@@ -1,0 +1,15 @@
+op_input=input().split()
+a=int(op_input[0])
+op=op_input[1]
+b=int(op_input[2])
+
+if op=="+":
+    print(a+b)
+elif op=="-":
+    print(a-b)
+elif op=="*":
+    print(a*b)
+elif op=="/":
+    print(a/b)
+elif op=="%":
+    print(a%b)
