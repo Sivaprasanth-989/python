@@ -1,0 +1,20 @@
+def find_and_order(even_matrix):
+    index=0
+    for i in range(m):
+        for j in range(n):
+            print(even_matrix[index],end=" ")
+            index+=1
+        print()
+def convert_matrix(m,n):
+    even_matrix=[]
+    for i in range(m):
+        row=input().split()
+        for j in range(n):
+            even_matrix.append(int(row[j]))
+    even_matrix.sort()
+    return even_matrix
+    
+first_line=input().split()
+m=int(first_line[0])
+n=int(first_line[1])
+find_and_order(convert_matrix(m,n))
