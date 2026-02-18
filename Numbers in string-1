@@ -1,0 +1,13 @@
+def convert_string_to_int(string):
+    total=[]
+    for word in string:
+        for ch in word:
+            if ch.isdigit():
+                total.append(int(ch))
+    summ=sum(total)
+    average=round((summ/len(total)),2)
+    return summ,average
+string=input().split()
+summ,average=convert_string_to_int(string)
+print(summ)
+print(average)
