@@ -1,0 +1,10 @@
+def find_first_perfect_square(m,n):
+    for i in range(m,n+1):
+        root=int(i**0.5)
+        if root*root==i:
+            return i
+        else:
+            return "No Perfect Square"
+m=int(input())
+n=int(input())
+print(find_first_perfect_square(m,n))
