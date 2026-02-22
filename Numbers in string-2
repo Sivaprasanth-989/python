@@ -1,0 +1,19 @@
+def get_sum_and_avg(sentence):
+    result=[]
+    num=""
+    for ch in sentence:
+        if ch.isdigit():
+            num+=ch
+        else:
+            if num!="":
+                result.append(int(num))
+                num=""
+    if num!="":
+        result.append(int(num))
+        
+    return sum(result),round((sum(result)/len(result)),2)
+    
+sentence=input()
+summ,avg=get_sum_and_avg(sentence)
+print(summ)
+print(avg)
