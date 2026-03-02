@@ -1,0 +1,11 @@
+class Mobile:
+    def __init__(self,model,camera):
+        self.model=model
+        self.camera=camera
+    def make_call(self,number):
+        print("{} Calling..>".format(number))
+        
+mobile_obj= Mobile("Samsung S24 Ultra","200 Mp")
+print(mobile_obj)
+
+mobile_obj.make_call(9876543210)
