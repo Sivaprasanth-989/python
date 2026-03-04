@@ -1,0 +1,10 @@
+class Mobile:
+    def __init__(self,model,camera):
+        self.model=model
+        self.camera=camera
+    def updated_model(self,new_model):
+        self.model=new_model
+mob_object=Mobile("Galazy","24px")
+print(mob_object.model)
+mob_object.updated_model("24 Ultra")
+print(mob_object.model)
