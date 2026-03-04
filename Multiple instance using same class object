@@ -1,0 +1,14 @@
+class Mobile:
+    def __init__(self,model,camera):
+        self.model=model
+        self.camera=camera
+    def make_call(self,number):
+        print("{} Calling..>".format(number))
+        
+    def text_mail(self,voice):
+        print("{} sent!".format(voice))
+        
+mobile_obj1= Mobile("Samsung S24 Ultra","200 Mp")
+mobile_obj2=Mobile("Samsung S25 Ultra","200 Mp")
+print(id(mobile_obj1))
+print(id(mobile_obj2))
