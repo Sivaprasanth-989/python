@@ -1,0 +1,22 @@
+class Shopping_cart:
+    def __init__(self):
+        self.items={}
+    def cart_items(self,item_name ,quantity):
+        self.items[item_name]=quantity
+    def remove_item(self,item_name):
+        del self.items[item_name]
+    def update_item(self,item_name,new_quantity):
+        self.items[item_name]=new_quantity
+    def get_cart_items(self):
+        get_cart_item=list(self.items.keys())
+        return get_cart_item
+obj_shopping_cart=Shopping_cart()
+obj_shopping_cart.cart_items("Apple",5)
+# ,"Orange",3,"Grapes",4,"Watermelon",10)
+print(obj_shopping_cart.get_cart_items())
+print(obj_shopping_cart.items)
+obj_shopping_cart.remove_item("Apple")
+print(obj_shopping_cart.items)
+obj_shopping_cart.update_item("Watermelon",10)
+print(obj_shopping_cart.get_cart_items())
+print(obj_shopping_cart.items)
