@@ -1,0 +1,30 @@
+class cart:
+    def __init__(self):
+        self.items={}
+        self.price_details = {'biskets':25,'laptop':100000}
+    def add_items(self,product_name,quantity):
+        self.items[product_name]=quantity
+    def update_items(self,product_name,updated_quantity):
+        self.items[product_name]=updated_quantity
+    def delete_item(self,product_name):
+        del self.items[product_name]
+    def get_items(self):
+        get_items=list(self.items.keys())
+        return get_items
+    def get_total_price(self):
+        total_price=0
+        for product_name,quantity in self.items.items():
+            total_price=quantity *self.price_details[product_name]
+            return total_price
+            #item cost
+cart_obj=cart()
+cart_obj.add_items("biskets",10)
+print(cart_obj.get_items())
+print(cart_obj.items)
+cart_obj.update_items("laptop",6)
+print(cart_obj.items)
+print(cart_obj.get_total_price())
+
+cart_obj2=cart()
+cart_obj2.add_items("cookies",10)
+cart_obj2.add_items("Mysurpaa",15)
