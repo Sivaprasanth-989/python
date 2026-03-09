@@ -1,0 +1,11 @@
+class Cart:
+    def __init__(self):
+        self.items={}
+    def add_items(self,item_name,quantity):
+        self.items[item_name]=quantity
+        self.display_items() #we can access instance methods
+    def display_items(self):
+        print(self.items)
+a=Cart()
+a.add_items('Milk_bikies',5)
+# a.display_items()
