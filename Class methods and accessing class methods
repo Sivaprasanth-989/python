@@ -1,0 +1,25 @@
+class Cart:
+    flat_discount=25
+    min_bill=100
+    def __init__(self):
+        self.items={}
+    def add_items(self,item_name,quantity):
+        self.items[item_name]=quantity
+        self.display_items() #we can access instance methods
+    def display_items(self):
+        print(self.items)
+        
+    @classmethod  #decorator
+    def update_items(cls,new_flat_discount):
+        cls.flat_discount=new_flat_discount  #remember dont make spelling mistake then it wont give accurate result as you think
+    
+    @classmethod
+    def increase_flat_discount(cls,extra_discount):
+        new_flat_discount=cls.flat_discount+extra_discount
+        cls.update_items(new_flat_discount)
+        
+Cart.increase_flat_discount(25)
+print(Cart.flat_discount)
+a=Cart()
+a.add_items('Milk_bikies',5)
+
