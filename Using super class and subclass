@@ -1,0 +1,27 @@
+class Product:
+    def __init__(self,name,price,deal_price,rating):
+        self.name=name
+        self.price=price
+        self.deal_price=deal_price
+        self.you_saved=price-deal_price
+        self.rating=rating
+    def display_product_details(self):
+        print("Product: {}".format(self.name))
+        print("Price: {}".format(self.price))
+        print("Deal_price: {}".format(self.deal_price))
+        print("You_saved: {}".format(self.you_saved))
+        print("Rating: {}".format(self.rating))
+
+class Electronic_item(Product):
+    pass
+
+class Grocery_item(Product):
+    pass
+
+e=Electronic_item("samsung 43inch",30000,27000,4.8)
+e.display_product_details()
+
+g=Grocery_item("Milk",25,20,4.5)
+g.display_product_details()
+p=Product("Laptop",115000,100000,4.9)
+p.display_product_details()
