@@ -1,0 +1,87 @@
+class Product:
+    def __init__(self,name,price,deal_price,rating):
+        self.name=name
+        self.price=price
+        self.deal_price=deal_price
+        self.you_saved=price-deal_price
+        self.rating=rating
+    def display_product_details(self):
+        print("Product: {}".format(self.name))
+        print("Price: {}".format(self.price))
+        print("Deal price: {}".format(self.deal_price))
+        print("You saved: {}".format(self.you_saved))
+        print("Rating: {}".format(self.rating))
+        
+    def get_deal_price(self):
+        return self.deal_price 
+
+class Electronic_item(Product):
+    def __init__(self,name,price,deal_price,rating,warrenty_in_months):
+        super().__init__(name,price,deal_price,rating)
+        self.warrenty_in_months=warrenty_in_months
+        
+    def get_warrenty(self):
+        return self.warrenty_in_months
+        
+    def display_product_details(self):
+        super().display_product_details()
+        print("Warrenty: {} months".format(self.warrenty_in_months))
+
+class Grocery_item(Product):
+    def __init__(self,name,price,deal_price,rating,expiry_date):
+        super().__init__(name,price,deal_price,rating)
+        self.expiry_date=expiry_date
+        
+    def get_expiry_date(self):
+        return self.expiry_date
+        
+    def display_product_details(self):
+        super().display_product_details()
+        print("Expiry date {}: ".format(self.expiry_date))
+
+class Order:
+    def __init__(self, delivery_speed, delivery_address):
+        self.items_in_cart=[]
+        self.delivery_speed=delivery_speed
+        self.delivery_address=delivery_address
+        
+    def add_item(self,product,quantity):
+        self.items_in_cart.append((product,quantity))
+        
+    def display_order_details(self):
+        for product,quantity in self.items_in_cart:
+            product.display_product_details()
+            print("Quantity: {}".format(quantity))
+            
+    def display_total_bill(self):
+        total_bill=0
+        for product,quantity in self.items_in_cart:
+            price=product.get_deal_price()*quantity
+            total_bill+=price
+        print("Total bill amount: {}".format(total_bill))
+        
+tv= Electronic_item("TV",40000,35000,4.5,24)
+tv.display_product_details()
+
+milk=Grocery_item("Milk",25,20,4.8,"31/3/2022")
+milk.display_product_details()
+# tv.set_warrenty(24)
+# milk=Grocery_item("Milk",20,15,4.8)
+# milk.set_expiry_date("31/03/202")
+# order=Order("Primary delivery","Tiruppur")
+
+# order.add_item(tv,1)
+# order.add_item(milk,4)
+
+# order.display_order_details()
+# order.display_total_bill()
+# e=Electronic_item("Samsung 43inch OLED",30000,27000,4.8)
+# e.set_warrenty(24)
+# e.display_electronic_product_details()
+
+# g=Grocery_item("Milk",25,20,4.5)
+# g.display_grocery_product_details()
+# # g=Grocery_item("Milk",25,20,4.5)
+# # g.display_product_details()
+# # p=Product("Laptop",115000,100000,4.9)
+# # p.display_product_details()
