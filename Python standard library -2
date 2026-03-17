@@ -1,0 +1,7 @@
+import random
+random_num=random.randint(1,8)
+print(random_num)
+
+#Choice
+random_ele=random.choice(['A','B','C','D'])
+print(random_ele)
