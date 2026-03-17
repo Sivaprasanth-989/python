@@ -1,0 +1,6 @@
+# import math as ml
+# print(ml.factorial(10))
+# print(ml.pi)
+
+from math import factorial as fact
+print(fact(5))
