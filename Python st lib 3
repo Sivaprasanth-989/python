@@ -1,0 +1,8 @@
+line = input().split()
+# print(line)
+result = map(int, line)
+print(list(result))
+
+#more compression method .but be carefull to do 
+num_list=list(map(int, input().split()))
+print(num_list)
