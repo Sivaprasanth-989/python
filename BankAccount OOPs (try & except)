@@ -1,0 +1,44 @@
+class BankAccount:
+    
+    def __init__(self,account_number):
+        self.account_number = str(account_number)
+        self.balance=0
+    
+    def withdraw(self,amount):
+        if self.balance >= amount:
+            self.balance -= amount
+        else:
+            raise ValueError("Insufficient balance")
+        
+    def deposit(self,amount):
+        self.balance += amount
+    
+    def get_balance(self):
+        return self.balance
+        
+#Developer 2 code 
+def transfer_amount(acc_1,acc_2,amount): # yaeh we can use this inside the class 
+    try:
+        acc_1.withdraw(amount)
+        acc_2.deposit(amount)
+        return "Successfull"
+    except:
+        return "Insufficient balance! "
+        
+user_1 = BankAccount("001")
+user_2  = BankAccount("002")
+user_1.deposit(50)
+user_2.deposit(100)
+
+print("User_1 balance: {}".format(user_1.get_balance()))
+print("user_2 balance: {}".format(user_2.get_balance()))
+print("Transferring amount 50/- from user_1 to user_2")
+print("-----------------------")
+
+print(transfer_amount(user_1, user_2,  50))
+
+print("-----------------------")
+print("User_1 balance: {}".format(user_1.get_balance()))
+print("User_2 balance: {}".format(user_2.get_balance()))
+    
+        
