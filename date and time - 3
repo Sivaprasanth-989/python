@@ -1,0 +1,8 @@
+from datetime import datetime 
+
+date_time_string = "19 March 2026"
+print(date_time_string)
+datetime_obj = datetime.strptime(date_time_string,"%d %B %Y")
+print(datetime_obj)
+
+  
