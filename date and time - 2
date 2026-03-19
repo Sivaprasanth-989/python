@@ -1,0 +1,8 @@
+from datetime import datetime
+
+datetime_obj = datetime.now()
+print(datetime_obj.year)
+print(datetime_obj.month)
+print(datetime_obj.minute)
+print(datetime_obj.hour)
+print(datetime_obj.second)
