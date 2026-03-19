@@ -4,3 +4,6 @@ date_object = datetime.date(2006,6,20)
 print(date_object)
 print(type(date_object))
   
+print(date_object.year)
+print(date_object.day)
+print(date_object.month)
