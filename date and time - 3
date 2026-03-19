@@ -5,4 +5,11 @@ print(date_time_string)
 datetime_obj = datetime.strptime(date_time_string,"%d %B %Y")
 print(datetime_obj)
 
-  
+
+from datetime import timedelta
+
+delta = timedelta(days = 365, hours = 2)
+print(delta)
+print(type(delta))
+
+
