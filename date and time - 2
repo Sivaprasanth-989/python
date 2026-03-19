@@ -6,3 +6,9 @@ print(datetime_obj.month)
 print(datetime_obj.minute)
 print(datetime_obj.hour)
 print(datetime_obj.second)
+
+from datetime import datetime
+
+datetime_obj = datetime.now()
+formated_datetime = datetime_obj.strftime("%d-%m-%Y %I:%M:%S %p")
+print(formated_datetime)
