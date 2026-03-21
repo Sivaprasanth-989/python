@@ -1,0 +1,5 @@
+from datetime import datetime, timedelta
+
+delta = timedelta(seconds = int(input()))
+datetime_format = datetime.strptime("1 jan 1970", "%d %b %Y")
+print(datetime_format + delta)
