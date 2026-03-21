@@ -1,0 +1,13 @@
+from datetime import datetime
+
+year_a, year_b = input().split()
+
+mondays = 0
+months = 12
+for year in range(int(year_a),int(year_b)+1):
+    for month in range(1,months+1):
+        datetime_obj = datetime(year, month, 1)
+        week_day = datetime.strftime(datetime_obj,"%A")
+        if week_day == "Monday":
+            mondays+=1
+print(mondays)
