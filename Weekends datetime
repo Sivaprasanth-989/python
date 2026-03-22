@@ -1,0 +1,17 @@
+from datetime import datetime, timedelta
+
+d1 = datetime.strptime(input(),"%d %b %Y")
+d2 = datetime.strptime(input(),"%d %b %Y")
+
+saturdays = 0
+sundays = 0
+
+current =  d1
+while current <= d2:
+    if current.weekday() == 5:
+        saturdays+=1
+    elif current.weekday() == 6:
+        sundays+=1
+    current+=timedelta(days=1)
+print("Saturday: {}".format(saturdays))
+print("Sunday: {}".format(sundays))
