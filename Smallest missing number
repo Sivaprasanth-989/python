@@ -1,0 +1,10 @@
+nums = list(map(int,input().split()))
+nums = set(nums)
+
+num = 1
+
+while True:
+    if num not in nums:
+        print(num)
+        break
+    num+=1
